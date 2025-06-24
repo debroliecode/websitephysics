@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimplyPhysics</title>
+  <title>Simply Physics</title>
   <style>
     body {
       margin: 0;
       font-family: 'Times New Roman', serif;
     }
-
+    
     header {
       text-align: center;
       font-size: 2.5em;
@@ -24,16 +23,18 @@
 
     .sidebar {
       width: 180px; /* Reduced width */
-      background-color: rgba(211, 211, 211, 0.8);
+      background-color: rgb(173, 194, 255);
       padding: 15px;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      height: calc(110vh - 80px); /* Match height of content area */
+      box-sizing: border-box;
     }
 
     .sidebar button {
       width: 100%;
-      padding: 8px;
-      margin: 8px 0;
-      font-size: 0.9em;
+      padding: 6px;
+      margin: 5px 0;
+      font-size: 0.85em;
       background-color: grey;
       color: white;
       border: 2px solid black;
@@ -63,7 +64,7 @@
   </style>
 </head>
 <body>
-  <header>SimplyPhysics</header>
+  <header>Simply Physics</header>
   <div class="container">
     <div class="sidebar">
       <button>Kinematics</button>
@@ -86,5 +87,6 @@
       </div>
     </div>
   </div>
+  
 </body>
 </html>
