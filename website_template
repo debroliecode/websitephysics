@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,13 +9,13 @@
       margin: 0;
       font-family: 'Times New Roman', serif;
     }
-    
+
     header {
       text-align: center;
       font-size: 2.5em;
       padding: 20px;
       color: black;
-      background-color: rgb(173, 194, 255); /* Lighter blue */
+      background-color: rgb(173, 194, 255);
     }
 
     .container {
@@ -22,15 +23,17 @@
     }
 
     .sidebar {
-      width: 180px; /* Reduced width */
+      width: 180px;
       background-color: rgb(173, 194, 255);
       padding: 15px;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-      height: calc(110vh - 80px); /* Match height of content area */
+      height: calc(100vh - 80px);
       box-sizing: border-box;
     }
 
-    .sidebar button {
+    .sidebar a {
+      display: block;
+      text-decoration: none;
       width: 100%;
       padding: 6px;
       margin: 5px 0;
@@ -38,7 +41,12 @@
       background-color: grey;
       color: white;
       border: 2px solid black;
+      text-align: center;
       cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      background-color: #555;
     }
 
     .content {
@@ -64,17 +72,17 @@
   </style>
 </head>
 <body>
-  <header>Simply Physics</header>
+  <header>SimplyPhysics</header>
   <div class="container">
     <div class="sidebar">
-      <button>Kinematics</button>
-      <button>Force and Translational Dynamics</button>
-      <button>Work, Energy, and Power</button>
-      <button>Linear Momentum</button>
-      <button>Torque and Rotational Dynamics</button>
-      <button>Energy and Momentum of Rotating Systems</button>
-      <button>Oscillations</button>
-      <button>Fluid Dynamics</button>
+      <a href="kinematics.html">Kinematics</a>
+      <a href="force-and-translational-dynamics.html">Force and Translational Dynamics</a>
+      <a href="work-energy-and-power.html">Work, Energy, and Power</a>
+      <a href="linear-momentum.html">Linear Momentum</a>
+      <a href="torque-and-rotational-dynamics.html">Torque and Rotational Dynamics</a>
+      <a href="energy-and-momentum-of-rotating-systems.html">Energy and Momentum of Rotating Systems</a>
+      <a href="oscillations.html">Oscillations</a>
+      <a href="fluid-dynamics.html">Fluid Dynamics</a>
     </div>
     <div class="content">
       <div class="atom-icon">
@@ -87,6 +95,5 @@
       </div>
     </div>
   </div>
-  
 </body>
 </html>
