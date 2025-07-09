@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinematics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(173, 194, 255);
+      font-family: 'Gabarito', sans-serif;
+    }
+
+    header {
+      background-color: grey;
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      border-bottom: 2px solid black;
+    }
+
+    .description {
+      font-family: 'Times New Roman', serif;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+    
+    .subtext {
+      font-family: 'Times New Roman', serif;
+      padding: 0px;
+      font-size: 0.9em;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: white;
+      border: 2px solid black;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>Force and Translational Dynamics</header>
+  <p class="description">Force and Translational Dynamics look at why objects move the way they do. Where kinematics simply looks at motion and how an object moves, the dynamics aspect looks at why an object moves concerning the fores applied to it. This subject centers around Newton's Laws. And below is a quick summary of different variables and how they should be understood. <br></p>
+  <p class = "subtext">Force - should be understood as a push or pull in a certain direction. Force is ALWAYS a vector(There is no such thing as a force without direction). Adding forces is the same as adding vectors. Forces have both a vertical and horizontal component which can be found with the force's magnitude multiplied by the sin and cos functions of its angle, respectively.<br><br>
+  Mass - can also be understood as inertia or resistance to motion. Mass is a scalar quantity, meaning it has no direction only magnitude. This should not be confused for an object's weight, as weight is the mass of an object multiplied by the gravitational acceleration of the area its in. <br><br>
+  Net Force - The total force acting on an object and the direction the force is in. The Net Force can be found by adding up all the individual forces impacting an object, or it can be found through Newton's Laws.<br><br>
+  Free Body Diagrams - These are essential tools and very easy to use. All a free body diagram consists of is the object or system, and drawing the forces along with the direction they are in with respect to said object. Helps visualize all the forces acting on an object. <br><br>
+  Forces To Be Aware Of: <br>
+    - Normal Force<br>
+    - Friction<br>
+    - Air Resistance(Although it is almost always negligible)<br>
+    - Tension<br>
+    - Spring Force
+  </p>
+
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="image1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Slide 3">
+    </div>
+    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function changeSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    // Initialize first slide
+    showSlide(slideIndex);
+  </script>
+  <p>Summary: Primary equations include Newton's Laws of Motion. The net force equation for a spring and understanding the variables relating to a spring conceptually. Pullee-system in terms of how to relate net force to the individual forces acting on objects. Force of gravity equation. Conservative Forces vs Non-Conservative Forces(Conservative forces' work done only depends on the initial and final positions of an object, not the path it took) <br>
+  </p>
+  <p class = "description">Other Resources:</p>
+  <ul>
+    <li><a href = "https://www.youtube.com/watch?v=g550H4e5FCY">Organic Chemistry Tutor on Newton 3 Laws</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=wAygj3fIOcc">Organic Chemistry Tutor on Friction Equations</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=RIBeeW1DSZg">Organic Chemistry Tutor Solving Friction Problems</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=9837OPM80dU">Review Over Whole Unit</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=syJ6Bmmquh8">Flipping Physics Review Over Whole Unit</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=mjnVzIGi9dQ">Bowman Video Focused on Pullee System/Tension</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=-89oNHOF73A&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4&index=8">Walter Lewin Lecture On Friction(If discussing topics too advanced ignore)</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=lreNV9ZJI44&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4&index=10">Walter Lewin Lecture On Hooke's Law and Oscillation</a></li>
+  </ul>
+</body>
+</html>
