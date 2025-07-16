@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work, Energy, and Power</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(173, 194, 255);
+      font-family: 'Gabarito', sans-serif;
+    }
+
+    header {
+      background-color: grey;
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      border-bottom: 2px solid black;
+    }
+
+    .description {
+      font-family: 'Times New Roman', serif;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: white;
+      border: 2px solid black;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>Work, Energy, and Power</header>
+  <p class="description">This unit focuses on the principles that govern how energy is transferred and transformed in physical systems. You’ll study how forces do work on objects, how energy is conserved in different scenarios, and how power quantifies the rate of energy transfer.
+  Work: The transfer of energy through the application of force over a distance.
+
+<br><br>Kinetic and Potential Energy: Forms of mechanical energy that depend on motion and position, respectively.
+
+<br><br>The Work–Energy Theorem: Connects net work done on an object to its change in kinetic energy.
+
+<br><br>Conservation of Energy: In a closed system, total mechanical energy remains constant unless work is done by external forces.
+
+Power: The rate at which work is done or energy is transferred.</p>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="image1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Slide 3">
+    </div>
+    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function changeSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    // Initialize first slide
+    showSlide(slideIndex);
+  </script>
+  <p>Summary: Primary equations include the velocity-time equation, displacement-time equation, time-independent equation, and displacement-velocity equation: <br>
+  hello</p>
+  <p class = "description">Other Resources:</p>
+  <ul>
+    <li><a href = "https://www.youtube.com/watch?v=dHjWVlfNraM">Organic Chemistry Tutor Video 1</li>
+    <li><a href = "https://www.youtube.com/watch?v=ulXdXTkIkAM">Organic Chemistry Tutor Video 2</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=nvjwr9PTBP8&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4">Series of Walter Lewin Lectures</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=q9IWoQ199_o">Walter Lewin Lecture Over Specifically 1D Kinematics</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=qP-9wwRrJbg">Flipping Physics - Might Be Better As Exam Review</a></li>
+    <li><a href = "https://www.crackap.com/ap/physics-1/test20.html">Practice Problems(crackap)</a></li>
+    <li><a href = "https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics">Khan Academy Course</a></li>
+    <li><a href = "https://www.learnapphysics.com/apphysics1and2/kinematics.php">Physics 1 & 2 Kinematics(Possibly too advanced)</a></li>
+    
+  </ul>
+</body>
+</html>
