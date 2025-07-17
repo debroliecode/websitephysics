@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Momentum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(173, 194, 255);
+      font-family: 'Gabarito', sans-serif;
+    }
+
+    header {
+      background-color: grey;
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      border-bottom: 2px solid black;
+    }
+
+    .description {
+      font-family: 'Times New Roman', serif;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: white;
+      border: 2px solid black;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>Linear Momentum</header>
+  <p class = "description">The Linear Momentum unit explores how the motion of objects is affected by forces during interactions, particularly in collisions and explosions. Momentum is a vector quantity that depends on both mass and velocity, and its conservation in isolated systems is a powerful tool for analyzing dynamic events.
+
+Key ideas in this unit include:
+
+<br><br>Linear Momentum: A measure of an object's motion, defined as the product of mass and velocity. Momentum is often known as the value of motion.
+
+<br><br>Impulse: The product of a force and the time over which it acts, equal to the change in momentum.
+
+<br><br>Impulse-Momentum Theorem: States that the impulse on an object equals its change in momentum
+
+<br><br>Conservation of Linear Momentum: In a closed, isolated system (no net external force), total momentum is conserved during interactions like collisions.</p>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="image1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Slide 3">
+    </div>
+    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function changeSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    // Initialize first slide
+    showSlide(slideIndex);
+  </script>
+  <p>Summary: Primary equations include the velocity-time equation, displacement-time equation, time-independent equation, and displacement-velocity equation: <br>
+  hello</p>
+  <p class = "description">Other Resources:</p>
+  <ul>
+    <li><a href = "https://www.youtube.com/watch?v=NIVNfI0RN2k">Organic Chemistry Tutor Linear Momentum and Conservation</li>
+    <li><a href = "https://www.youtube.com/watch?v=yQ9Uwbo4Vao">Quick 6 Minute Review Over Entire Unit</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=ufXw3CgzJCk">Flipping Physics Exam Review</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=PCvgWrgVJx0">Physics By Brown Momentum Review</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=FfaEbqmvKQA">Organic Chem Tutor 1 Hour Video(Collisions and Momentum)</a></li>
+    <li><a href = "https://www.varsitytutors.com/ap_physics_1-help/newtonian-mechanics/linear-motion-and-momentum?page=27">Linear Momentum Practice Problems(Varsitytutors)</a></li>
+    <li><a href = "https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:linear-momentum/xf557a762645cccc5:linear-momentum-and-impulse/e/momentum-and-impulse">Khan Academy Practice(Good for Introduction)</a></li>
+    <li><a href = "https://www.crackap.com/ap/physics-1/test23.html">Practice Problems(Possibly Too Simple)</a></li>
+    <li><a href = "https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-5-momentum.pdf">Practice Test 1(Impulse, Momentum)</a></li>
+    
+  </ul>
+</body>
+</html>
