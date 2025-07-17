@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torque and Rotational Dynamics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(173, 194, 255);
+      font-family: 'Gabarito', sans-serif;
+    }
+
+    header {
+      background-color: grey;
+      color: black;
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      border-bottom: 2px solid black;
+    }
+
+    .description {
+      font-family: 'Times New Roman', serif;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: white;
+      border: 2px solid black;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>Torque and Rotational Dynamics</header>
+  <p class = "description">This unit extends Newtonian mechanics to rotational motion, focusing on how objects rotate and what causes changes in their rotational state. It mirrors linear dynamics, but with angular quantities like torque, angular acceleration, and moment of inertia
+
+Key ideas in this unit include:
+
+<br><br>Torque: The circular equivalent for force. Torque is basically a twisting force, it only exists to turn or twist objects not to push in one direction like a normal force. Because of this, its equal to the force exerted multiplied by the radius multiplied by the sin of the angle at which the force is being applied.
+<br><br> Torque = (radius)(Force)(sin(&theta;))
+<br><br>Imagine you have a disk that is horizontal, now you spin that disk using a force from your hand. The Torque exerted on that disk(causing it to spin) would equal
+<br><br>Torque = (distance from center or radius)(Force from hand)(sin(&theta;))
+<br>This shows its application in a simple problem-type scenario
+
+<br><br>Moment of Intertia: A measure of how mass is distributed relative to an axis of rotation; it resists changes in rotational motion. Generally you will be expected to apply Moment of Inertia conceptually. But, know that for spheres there is an equation you are expected to know.
+<br><br>Moment of Inertia = (2/5)(Mass of Sphere)(Radius)^2
+
+<br><br>Torque Equation: Be familiar with both equations.
+<br>Torque = (Force)(radius)(sin(&theta;))
+<br>Torque = I	&alpha;, where I equals the moment of Inertia of the object and &alpha; is the angular acceleration
+
+<br><br>Relationship between angular values and linear values: Angular velocity relates to linear velocity in the manner that &nu; = (&omega;)(radius)
+  <br><br>Generally speaking, the linear form of any angular value will just require that angular value to be multiplied by the radius. The radius serves to separate angular from linear. </p>
+  <div class="slideshow-container">
+    <div class="slide">
+      <img src="image1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="image2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="image3.jpg" alt="Slide 3">
+    </div>
+    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function changeSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    // Initialize first slide
+    showSlide(slideIndex);
+  </script>
+  <p>Summary: Primary equations include the velocity-time equation, displacement-time equation, time-independent equation, and displacement-velocity equation: <br>
+  hello</p>
+  <p class = "description">Other Resources:</p>
+  <ul>
+    <li><a href = "https://www.youtube.com/watch?v=nq4qwis42c8">Quick Review(Better Under a Time Crunch)</li>
+    <li><a href = "https://www.youtube.com/watch?v=qF858q3ACws">Physics By Bowman Video(48min)</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=JV6kpJokDMM&list=PLqq53oCeWPDMr8e9MnYdY47kH7O9hk0o5">Lessons with Londot Video</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=C2qGOfCOUko&list=PLPyapQSxH6mbFL-xjwjaSfwYBFhQoLddZ">Flipping Physics(Discusses Derivations)</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=dbvr-L5rxdg">Organic Chem Tutor(Good Introduction Video)</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=ZuGQCoz4bpw">Torque and Rotational Dynamics Review Video</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=DR9BplQ0vHs">Practice Problems Video</a></li>
+    <li><a href = "https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:torque-and-rotational-dynamics">Khan Academy Practice(Good to Start WIth)</a></li>
+    <li><a href = "https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-6-rotation-angular_momentum.pdf">Practice Problems(In-Depth, Near AP Test Difficulty)</a></li>
+    
+  </ul>
+</body>
+</html>
