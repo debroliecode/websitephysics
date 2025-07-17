@@ -76,9 +76,9 @@
 
 <br><br>The Work–Energy Theorem: Connects net work done on an object to its change in kinetic energy.
 
-<br><br>Conservation of Energy: In a closed system, total mechanical energy remains constant unless work is done by external forces.
+<br><br>Conservation of Energy: In a closed system, total mechanical energy remains constant unless work is done by external forces. In terms of its application, this means that, in closed systems, the sum of the initial values for kinetic and potential energy(the makeup of mechanical energy) will be equal to the sum of the final values of kinetic and potential energy.
 
-Power: The rate at which work is done or energy is transferred.</p>
+<br><br>Power: The rate at which work is done or energy is transferred. Equal to the total amount of work done over a certain change in time</p>
   <div class="slideshow-container">
     <div class="slide">
       <img src="image1.jpg" alt="Slide 1">
@@ -115,14 +115,15 @@ Power: The rate at which work is done or energy is transferred.</p>
   hello</p>
   <p class = "description">Other Resources:</p>
   <ul>
-    <li><a href = "https://www.youtube.com/watch?v=dHjWVlfNraM">Organic Chemistry Tutor Video 1</li>
-    <li><a href = "https://www.youtube.com/watch?v=ulXdXTkIkAM">Organic Chemistry Tutor Video 2</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=nvjwr9PTBP8&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4">Series of Walter Lewin Lectures</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=q9IWoQ199_o">Walter Lewin Lecture Over Specifically 1D Kinematics</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=qP-9wwRrJbg">Flipping Physics - Might Be Better As Exam Review</a></li>
-    <li><a href = "https://www.crackap.com/ap/physics-1/test20.html">Practice Problems(crackap)</a></li>
-    <li><a href = "https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:kinematics">Khan Academy Course</a></li>
-    <li><a href = "https://www.learnapphysics.com/apphysics1and2/kinematics.php">Physics 1 & 2 Kinematics(Possibly too advanced)</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=_MR1Dp8-F8w&t=2s">Organic Chemistry Tutor Introduction Video</li>
+    <li><a href = "https://www.youtube.com/watch?v=dyueNvRuxic">Flipping Physics Exam Review</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=3gcCKvKzAW0">Organic Chemistry Tutor More In-Depth Review</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=9gUdDM6LZGo">Walter Lewin Lecture Over Work, Energy, and Power</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=ICN5Pn3syq0">Physics Review(Shorter) - Better If on a Time Crunch</a></li>
+    <li><a href = "https://www.youtube.com/watch?v=NfB5ylTEpxU">Work, Energy, and Power Video Over Practice Problems</a></li>
+    <li><a href = "https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-4-work-energy.pdf">Practice Test 1</a></li>
+    <li><a href = "https://web.mit.edu/~yczeng/Public/WORKBOOK%201%20FULL.pdf">Practice Test Workbook(Possibly Too Advanced)</a></li>
+    <li><a href = "http://content.njctl.org/courses/science/ap-physics-1/work-and-energy/work-and-energy-multiple-choice-2/work-and-energy-multiple-choice-2014-08-14.pdf">Practice Test 3(Easier, Good to Start With)</a></li>
     
   </ul>
 </body>
