@@ -3,53 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kinematics</title>
+  <title>Force and Translational Dynamics | Simply Physics</title>
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin: 0;
-      background-color: rgb(173, 194, 255);
       font-family: 'Gabarito', sans-serif;
+      background-color: #1e293b; /* dark blue background */
+      color: #f8fafc;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: grey;
-      color: black;
+      background: linear-gradient(90deg, #4f46e5, #3b82f6);
+      color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 2.5em;
-      border-bottom: 2px solid black;
+      padding: 25px;
+      font-size: 2.3em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     }
 
-    .description {
-      font-family: 'Times New Roman', serif;
-      padding: 20px;
-      font-size: 1.2em;
-    }
-    
-    .subtext {
-      font-family: 'Times New Roman', serif;
-      padding: 0px;
-      font-size: 0.9em;
+    main {
+      flex: 1;
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      color: #1e293b;
     }
 
+    h2 {
+      color: #334155;
+      border-left: 5px solid #3b82f6;
+      padding-left: 10px;
+      margin-top: 25px;
+      font-size: 1.6em;
+    }
+
+    p.description, p.subtext {
+      font-family: 'Times New Roman', serif;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: #1f2937;
+    }
+
+    p.subtext {
+      font-size: 1em;
+    }
+
+    /* Slideshow styling */
     .slideshow-container {
       position: relative;
       max-width: 600px;
-      margin: 0 auto 40px;
-      background: white;
-      border: 2px solid black;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      margin: 20px auto 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #3b82f6;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .slide {
       display: none;
-      width: 100%;
     }
 
     .slide img {
       width: 100%;
-      height: auto;
+      display: block;
     }
 
     .nav-btn {
@@ -59,48 +88,153 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       border: none;
-      padding: 10px;
+      padding: 12px;
       cursor: pointer;
-      font-size: 1.2em;
+      font-size: 1.5em;
+      transition: background-color 0.2s;
+      border-radius: 50%;
     }
 
-    .prev {
-      left: 0;
+    .nav-btn:hover {
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .next {
-      right: 0;
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Equations */
+    .equations {
+      margin-top: 15px;
+      font-family: 'Times New Roman', serif;
+      font-size: 1.1em;
+      font-style: italic;
+      background-color: #f1f5f9;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #3b82f6;
+    }
+
+    /* Lists & links */
+    ul {
+      list-style-type: square;
+      margin-top: 15px;
+      padding-left: 25px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111827;
+      color: white;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      transition: background-color 0.3s;
+      font-size: 1em;
+    }
+
+    .back-btn:hover {
+      background-color: #2563eb;
     }
   </style>
 </head>
-<body>
-  <header>Force and Translational Dynamics</header>
-  <p class="description">Force and Translational Dynamics look at why objects move the way they do. Where kinematics simply looks at motion and how an object moves, the dynamics aspect looks at why an object moves concerning the fores applied to it. This subject centers around Newton's Laws. And below is a quick summary of different variables and how they should be understood. <br></p>
-  <p class = "subtext">Force - should be understood as a push or pull in a certain direction. Force is ALWAYS a vector(There is no such thing as a force without direction). Adding forces is the same as adding vectors. Forces have both a vertical and horizontal component which can be found with the force's magnitude multiplied by the sin and cos functions of its angle, respectively.<br><br>
-  Mass - can also be understood as inertia or resistance to motion. Mass is a scalar quantity, meaning it has no direction only magnitude. This should not be confused for an object's weight, as weight is the mass of an object multiplied by the gravitational acceleration of the area its in. <br><br>
-  Net Force - The total force acting on an object and the direction the force is in. The Net Force can be found by adding up all the individual forces impacting an object, or it can be found through Newton's Laws.<br><br>
-  Free Body Diagrams - These are essential tools and very easy to use. All a free body diagram consists of is the object or system, and drawing the forces along with the direction they are in with respect to said object. Helps visualize all the forces acting on an object. <br><br>
-  Forces To Be Aware Of: <br>
-    - Normal Force<br>
-    - Friction<br>
-    - Air Resistance(Although it is almost always negligible)<br>
-    - Tension<br>
-    - Spring Force
-  </p>
 
-  <div class="slideshow-container">
-    <div class="slide">
-      <img src="image1.jpg" alt="Slide 1">
+<body>
+  <header>Simply Physics — Force and Translational Dynamics</header>
+
+  <main>
+    <a href="index.html" class="back-btn">← Back to Main Menu</a>
+
+    <h2>Introduction</h2>
+    <p class="description">
+      Force and Translational Dynamics explore <em>why</em> objects move the way they do. While kinematics only describes motion,
+      dynamics examines the <strong>causes</strong> behind motion - namely, the forces acting on objects. This topic centers around
+      Newton’s Laws of Motion and introduces fundamental ideas about mass, inertia, net force, and equilibrium.
+    </p>
+
+    <p class="subtext">
+      <strong>Force:</strong> A push or pull acting on an object in a certain direction. Force is a <em>vector</em> quantity — it has both magnitude and direction. Forces can be broken down into horizontal and vertical components using trigonometric functions (sin and cos).<br><br>
+      <strong>Mass:</strong> Represents an object’s inertia - its resistance to changes in motion. It’s a scalar quantity (no direction). Weight, however, is the force due to gravity acting on that mass: <em>W = m·g</em>.<br><br>
+      <strong>Net Force:</strong> The vector sum of all forces acting on an object. According to Newton’s Second Law, <em>F<sub>net</sub> = m·a</em>.<br><br>
+      <strong>Free Body Diagrams:</strong> Simple but powerful tools for analyzing forces. They represent all forces acting on a single object using arrows to show direction and relative magnitude.<br><br>
+      <strong>Common Forces:</strong><br>
+      - Normal Force<br>
+      - Friction<br>
+      - Air Resistance (usually negligible)<br>
+      - Tension<br>
+      - Spring Force
+    </p>
+
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="image1.jpg" alt="Newton's Laws Illustration">
+      </div>
+      <div class="slide">
+        <img src="image2.jpg" alt="Force Diagram Example">
+      </div>
+      <div class="slide">
+        <img src="image3.jpg" alt="Free Body Diagram Example">
+      </div>
+
+      <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-    <div class="slide">
-      <img src="image2.jpg" alt="Slide 2">
+
+    <h2>Summary of Key Equations</h2>
+    <div class="equations">
+      1. F<sub>net</sub> = m·a<br>
+      2. W = m·g<br>
+      3. F<sub>s</sub> = k·x &nbsp;&nbsp;(Hooke’s Law — spring force)<br>
+      4. f<sub>k</sub> = μ<sub>k</sub>·N &nbsp;&nbsp;(Kinetic friction)<br>
+      5. f<sub>s</sub> ≤ μ<sub>s</sub>·N &nbsp;&nbsp;(Static friction)<br>
+      6. ΣF = 0 &nbsp;&nbsp;(Equilibrium condition)
     </div>
-    <div class="slide">
-      <img src="image3.jpg" alt="Slide 3">
-    </div>
-    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
-  </div>
+
+    <p class="description" style="margin-top:20px;">
+      These equations summarize the foundation of Newtonian mechanics — relating forces, mass, and acceleration. Understanding
+      how to apply them to different systems (such as pulleys or inclined planes) is crucial to mastering translational dynamics.
+    </p>
+
+    <h2>Other Resources</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=g550H4e5FCY" target="_blank">Organic Chemistry Tutor - Newton’s 3 Laws</a></li>
+      <li><a href="https://www.youtube.com/watch?v=wAygj3fIOcc" target="_blank">Organic Chemistry Tutor - Friction Equations</a></li>
+      <li><a href="https://www.youtube.com/watch?v=RIBeeW1DSZg" target="_blank">Organic Chemistry Tutor - Solving Friction Problems</a></li>
+      <li><a href="https://www.youtube.com/watch?v=9837OPM80dU" target="_blank">Comprehensive Unit Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=syJ6Bmmquh8" target="_blank">Flipping Physics - Forces and Motion Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=mjnVzIGi9dQ" target="_blank">Bowman Physics - Pulley Systems & Tension</a></li>
+      <li><a href="https://www.youtube.com/watch?v=-89oNHOF73A&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4&index=8" target="_blank">Walter Lewin - Lecture on Friction</a></li>
+      <li><a href="https://www.youtube.com/watch?v=lreNV9ZJI44&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4&index=10" target="_blank">Walter Lewin - Hooke’s Law and Oscillation</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    © 2025 Simply Physics | AP Physics 1 — Force and Translational Dynamics
+  </footer>
 
   <script>
     let slideIndex = 0;
@@ -117,21 +251,7 @@
       showSlide(slideIndex);
     }
 
-    // Initialize first slide
     showSlide(slideIndex);
   </script>
-  <p>Summary: Primary equations include Newton's Laws of Motion. The net force equation for a spring and understanding the variables relating to a spring conceptually. Pullee-system in terms of how to relate net force to the individual forces acting on objects. Force of gravity equation. Conservative Forces vs Non-Conservative Forces(Conservative forces' work done only depends on the initial and final positions of an object, not the path it took) <br>
-  </p>
-  <p class = "description">Other Resources:</p>
-  <ul>
-    <li><a href = "https://www.youtube.com/watch?v=g550H4e5FCY">Organic Chemistry Tutor on Newton 3 Laws</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=wAygj3fIOcc">Organic Chemistry Tutor on Friction Equations</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=RIBeeW1DSZg">Organic Chemistry Tutor Solving Friction Problems</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=9837OPM80dU">Review Over Whole Unit</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=syJ6Bmmquh8">Flipping Physics Review Over Whole Unit</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=mjnVzIGi9dQ">Bowman Video Focused on Pullee System/Tension</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=-89oNHOF73A&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4&index=8">Walter Lewin Lecture On Friction(If discussing topics too advanced ignore)</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=lreNV9ZJI44&list=PLaLOVNqqD-2HUv0qoYzSj0SBOIO_pLtW4&index=10">Walter Lewin Lecture On Hooke's Law and Oscillation</a></li>
-  </ul>
 </body>
 </html>
