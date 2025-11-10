@@ -3,95 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work, Energy, and Power</title>
+  <title>Work, Energy, and Power | Simply Physics</title>
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin: 0;
-      background-color: rgb(173, 194, 255);
       font-family: 'Gabarito', sans-serif;
+      background-color: #1e293b; /* Dark blue background */
+      color: #f8fafc;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: grey;
-      color: black;
+      background: linear-gradient(90deg, #4f46e5, #3b82f6);
+      color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 2.5em;
-      border-bottom: 2px solid black;
+      padding: 25px;
+      font-size: 2.3em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      border-bottom: 3px solid rgba(255,255,255,0.3);
     }
 
-    .description {
+    main {
+      flex: 1;
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      color: #1e293b;
+    }
+
+    h2 {
+      color: #334155;
+      border-left: 5px solid #3b82f6;
+      padding-left: 10px;
+      margin-top: 25px;
+      font-size: 1.6em;
+    }
+
+    p.description {
       font-family: 'Times New Roman', serif;
-      padding: 20px;
-      font-size: 1.2em;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: #1f2937;
     }
 
+    /* Slideshow styling */
     .slideshow-container {
       position: relative;
       max-width: 600px;
-      margin: 0 auto 40px;
-      background: white;
-      border: 2px solid black;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      margin: 20px auto 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #3b82f6;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .slide {
-      display: none;
-      width: 100%;
-    }
+    .slide { display: none; }
 
     .slide img {
       width: 100%;
-      height: auto;
+      display: block;
     }
 
     .nav-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0,0,0,0.5);
       color: white;
       border: none;
-      padding: 10px;
+      padding: 12px;
       cursor: pointer;
-      font-size: 1.2em;
+      font-size: 1.5em;
+      transition: background-color 0.2s;
+      border-radius: 50%;
     }
 
-    .prev {
-      left: 0;
+    .nav-btn:hover { background-color: rgba(0,0,0,0.7); }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Equations styling */
+    .equations {
+      margin-top: 15px;
+      font-family: 'Times New Roman', serif;
+      font-size: 1.1em;
+      font-style: italic;
+      background-color: #f1f5f9;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #3b82f6;
     }
 
-    .next {
-      right: 0;
+    ul {
+      list-style-type: square;
+      margin-top: 15px;
+      padding-left: 25px;
     }
+
+    ul li { margin-bottom: 8px; }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111827;
+      color: white;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      transition: background-color 0.3s;
+      font-size: 1em;
+    }
+
+    .back-btn:hover { background-color: #2563eb; }
+
   </style>
 </head>
+
 <body>
-  <header>Work, Energy, and Power</header>
-  <p class="description">This unit focuses on the principles that govern how energy is transferred and transformed in physical systems. You’ll study how forces do work on objects, how energy is conserved in different scenarios, and how power quantifies the rate of energy transfer.
-  Work: The transfer of energy through the application of force over a distance.
+  <header>Simply Physics — Work, Energy, and Power</header>
 
-<br><br>Kinetic and Potential Energy: Forms of mechanical energy that depend on motion and position, respectively.
+  <main>
+    <a href="index.html" class="back-btn">← Back to Main Menu</a>
 
-<br><br>The Work–Energy Theorem: Connects net work done on an object to its change in kinetic energy.
+    <h2>Introduction</h2>
+    <p class="description">
+      This unit focuses on how energy is transferred and transformed in physical systems. You’ll study how forces do work
+      on objects, how energy is conserved, and how power quantifies the rate of energy transfer.
+    </p>
 
-<br><br>Conservation of Energy: In a closed system, total mechanical energy remains constant unless work is done by external forces. In terms of its application, this means that, in closed systems, the sum of the initial values for kinetic and potential energy(the makeup of mechanical energy) will be equal to the sum of the final values of kinetic and potential energy.
+    <p class="description">
+      <strong>Work:</strong> The transfer of energy through the application of force over a distance.<br><br>
+      <strong>Kinetic and Potential Energy:</strong> Mechanical energy due to motion or position.<br><br>
+      <strong>Work–Energy Theorem:</strong> Net work done on an object equals its change in kinetic energy.<br><br>
+      <strong>Conservation of Energy:</strong> In a closed system, total mechanical energy remains constant unless external work is done. Initial and final kinetic + potential energy sums are equal.<br><br>
+      <strong>Power:</strong> Rate at which work is done or energy is transferred: P = W / Δt
+    </p>
 
-<br><br>Power: The rate at which work is done or energy is transferred. Equal to the total amount of work done over a certain change in time</p>
-  <div class="slideshow-container">
-    <div class="slide">
-      <img src="image1.jpg" alt="Slide 1">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="image1.jpg" alt="Work Concept Illustration">
+      </div>
+      <div class="slide">
+        <img src="image2.jpg" alt="Energy Diagram Example">
+      </div>
+      <div class="slide">
+        <img src="image3.jpg" alt="Power Concept Example">
+      </div>
+
+      <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-    <div class="slide">
-      <img src="image2.jpg" alt="Slide 2">
+
+    <h2>Summary of Key Equations</h2>
+    <div class="equations">
+      1. W = F·d·cosθ<br>
+      2. K = ½·m·v² (Kinetic Energy)<br>
+      3. U = m·g·h (Potential Energy)<br>
+      4. W<sub>net</sub> = ΔK<br>
+      5. P = W / Δt
     </div>
-    <div class="slide">
-      <img src="image3.jpg" alt="Slide 3">
-    </div>
-    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
-  </div>
+
+    <h2>Other Resources</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=_MR1Dp8-F8w&t=2s" target="_blank">Organic Chemistry Tutor — Intro Video</a></li>
+      <li><a href="https://www.youtube.com/watch?v=dyueNvRuxic" target="_blank">Flipping Physics Exam Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=3gcCKvKzAW0" target="_blank">Organic Chemistry Tutor — More In-Depth Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=9gUdDM6LZGo" target="_blank">Walter Lewin Lecture on Work, Energy, and Power</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ICN5Pn3syq0" target="_blank">Physics Review (Concise)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=NfB5ylTEpxU" target="_blank">Work, Energy, and Power — Practice Problems</a></li>
+      <li><a href="https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-4-work-energy.pdf" target="_blank">Practice Test 1</a></li>
+      <li><a href="https://web.mit.edu/~yczeng/Public/WORKBOOK%201%20FULL.pdf" target="_blank">Practice Test Workbook (Advanced)</a></li>
+      <li><a href="http://content.njctl.org/courses/science/ap-physics-1/work-and-energy/work-and-energy-multiple-choice-2/work-and-energy-multiple-choice-2014-08-14.pdf" target="_blank">Practice Test 3 (Easier)</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    © 2025 Simply Physics | AP Physics 1 — Work, Energy, and Power
+  </footer>
 
   <script>
     let slideIndex = 0;
@@ -108,23 +228,7 @@
       showSlide(slideIndex);
     }
 
-    // Initialize first slide
     showSlide(slideIndex);
   </script>
-  <p>Summary: Primary equations include the velocity-time equation, displacement-time equation, time-independent equation, and displacement-velocity equation: <br>
-  hello</p>
-  <p class = "description">Other Resources:</p>
-  <ul>
-    <li><a href = "https://www.youtube.com/watch?v=_MR1Dp8-F8w&t=2s">Organic Chemistry Tutor Introduction Video</li>
-    <li><a href = "https://www.youtube.com/watch?v=dyueNvRuxic">Flipping Physics Exam Review</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=3gcCKvKzAW0">Organic Chemistry Tutor More In-Depth Review</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=9gUdDM6LZGo">Walter Lewin Lecture Over Work, Energy, and Power</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=ICN5Pn3syq0">Physics Review(Shorter) - Better If on a Time Crunch</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=NfB5ylTEpxU">Work, Energy, and Power Video Over Practice Problems</a></li>
-    <li><a href = "https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-4-work-energy.pdf">Practice Test 1</a></li>
-    <li><a href = "https://web.mit.edu/~yczeng/Public/WORKBOOK%201%20FULL.pdf">Practice Test Workbook(Possibly Too Advanced)</a></li>
-    <li><a href = "http://content.njctl.org/courses/science/ap-physics-1/work-and-energy/work-and-energy-multiple-choice-2/work-and-energy-multiple-choice-2014-08-14.pdf">Practice Test 3(Easier, Good to Start With)</a></li>
-    
-  </ul>
 </body>
 </html>
