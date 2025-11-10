@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oscillations | Simply Physics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box‑sizing:border-box; }
+    body {
+      font-family: 'Gabarito', sans-serif;
+      background-color: #1e293b; /* dark blue background */
+      color: #f8fafc;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(90deg,#4f46e5,#3b82f6);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 2.3em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      border-bottom:3px solid rgba(255,255,255,0.3);
+    }
+    main {
+      flex:1;
+      width:90%;
+      max-width:900px;
+      margin:40px auto;
+      background-color:white;
+      padding:30px;
+      border-radius:12px;
+      box-shadow:0 8px 16px rgba(0,0,0,0.3);
+      color: #1e293b;
+    }
+    h2 {
+      color: #334155;
+      border-left:5px solid #3b82f6;
+      padding-left:10px;
+      margin-top:25px;
+      font-size:1.6em;
+    }
+    p.description {
+      font-family:'Times New Roman', serif;
+      font-size:1.1em;
+      margin-bottom:20px;
+      color: #1f2937;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width:600px;
+      margin:20px auto 40px;
+      border-radius:10px;
+      overflow:hidden;
+      border:2px solid #3b82f6;
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
+    .slide { display:none; }
+    .slide img { width:100%; display:block; }
+    .nav-btn {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color:white;
+      border:none;
+      padding:12px;
+      cursor:pointer;
+      font-size:1.5em;
+      transition: background-color 0.2s;
+      border-radius:50%;
+    }
+    .nav-btn:hover { background-color: rgba(0,0,0,0.7); }
+    .prev { left:10px; }
+    .next { right:10px; }
+    .equations {
+      margin-top:15px;
+      font-family:'Times New Roman', serif;
+      font-size:1.1em;
+      font-style: italic;
+      background-color:#f1f5f9;
+      padding:15px;
+      border-radius:8px;
+      border-left:4px solid #3b82f6;
+    }
+    ul {
+      list-style-type:square;
+      margin-top:15px;
+      padding-left:25px;
+    }
+    ul li { margin-bottom:8px; }
+    a {
+      color:#3b82f6;
+      text-decoration:none;
+      font-weight:500;
+    }
+    a:hover {
+      text-decoration:underline;
+      color:#2563eb;
+    }
+    footer {
+      text-align:center;
+      padding:20px;
+      background-color:#111827;
+      color:white;
+      font-size:0.9em;
+      box-shadow:0 -2px 6px rgba(0,0,0,0.2);
+    }
+    .back-btn {
+      display:inline-block;
+      background-color:#3b82f6;
+      color:white;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:8px;
+      margin-bottom:25px;
+      transition: background-color 0.3s;
+      font-size:1em;
+    }
+    .back-btn:hover { background-color:#2563eb; }
+  </style>
+</head>
+
+<body>
+  <header>Simply Physics — Oscillations</header>
+
+  <main>
+    <a href="index.html" class="back-btn">← Back to Main Menu</a>
+
+    <h2>Introduction</h2>
+    <p class="description">
+      In this unit, we explore oscillatory motion, especially simple harmonic motion (SHM), and how systems like springs and pendulums store and exchange energy. Key ideas include amplitude, period, frequency, phase, damping, and resonance.
+    </p>
+
+    <h2>Summary of Key Equations</h2>
+    <div class="equations">
+      1. x = A·cos(ω·t + φ) &nbsp;&nbsp;(Position as a function of time)<br>
+      2. v = –A·ω·sin(ω·t + φ) &nbsp;&nbsp;(Velocity in SHM)<br>
+      3. a = –ω²·x &nbsp;&nbsp;(Acceleration in SHM)<br>
+      4. T = 2·π/ω &nbsp;&nbsp;(Period of oscillation)  
+    </div>
+
+    <h2>Video Resources</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=CK9_9WD0Abg" target="_blank">The Organic Chemistry Tutor — Equations of Simple Harmonic Motion (Oscillations & SHM) (demo/teaching)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=jfilQUWfiJo" target="_blank">The Organic Chemistry Tutor — Oscillations 1 Example Problems (high‑school level demo)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=OdVJAy5KgvU" target="_blank">Unit Review: Energy & Momentum of Rotating Systems (longer review) [useful cross‑topic]</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ktMu1bXQbks" target="_blank">AP Physics 1 – Unit 6 Review (Rotating/Oscillations) (quick review)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=f6CBRZWC0HE" target="_blank">Rotational Kinetic Energy & Oscillations Focused Topic (additional help)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=_DA9_Hd372I" target="_blank">7 Energy & Momentum Demos (including oscillatory systems) – helpful visual understanding</a></li>
+    </ul>
+
+    <h2>Practice Worksheets</h2>
+    <ul>
+      <li><a href="https://www.physicsclassroom.com/physics_flash/AWTS/LP‑worksheet_shm.pdf" target="_blank">Worksheet: Simple Harmonic Motion & Oscillations</a></li>
+      <li><a href="https://www.physicsclassroom.com/physics_flash/AWTS/LP‑worksheet_shm_answers.pdf" target="_blank">Answer Key: SHM Worksheet</a></li>
+      <li><a href="https://www.myphysicslab.com/oscillations/worksheet_oscillations_examples.pdf" target="_blank">Worksheet: Oscillations & Damping Example Problems</a></li>
+    </ul>
+
+  </main>
+
+  <footer>
+    © 2025 Simply Physics | AP Physics 1 — Oscillations
+  </footer>
+
+</body>
+</html>
