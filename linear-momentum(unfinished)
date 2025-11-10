@@ -3,96 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linear Momentum</title>
+  <title>Linear Momentum | Simply Physics</title>
   <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin: 0;
-      background-color: rgb(173, 194, 255);
       font-family: 'Gabarito', sans-serif;
+      background-color: #1e293b; /* Dark blue background */
+      color: #f8fafc;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: grey;
-      color: black;
+      background: linear-gradient(90deg, #4f46e5, #3b82f6);
+      color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 2.5em;
-      border-bottom: 2px solid black;
+      padding: 25px;
+      font-size: 2.3em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      border-bottom: 3px solid rgba(255,255,255,0.3);
     }
 
-    .description {
+    main {
+      flex: 1;
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      color: #1e293b;
+    }
+
+    h2 {
+      color: #334155;
+      border-left: 5px solid #3b82f6;
+      padding-left: 10px;
+      margin-top: 25px;
+      font-size: 1.6em;
+    }
+
+    p.description {
       font-family: 'Times New Roman', serif;
-      padding: 20px;
-      font-size: 1.2em;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: #1f2937;
     }
 
+    /* Slideshow styling */
     .slideshow-container {
       position: relative;
       max-width: 600px;
-      margin: 0 auto 40px;
-      background: white;
-      border: 2px solid black;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      margin: 20px auto 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #3b82f6;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .slide {
-      display: none;
-      width: 100%;
-    }
+    .slide { display: none; }
 
     .slide img {
       width: 100%;
-      height: auto;
+      display: block;
     }
 
     .nav-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0,0,0,0.5);
       color: white;
       border: none;
-      padding: 10px;
+      padding: 12px;
       cursor: pointer;
-      font-size: 1.2em;
+      font-size: 1.5em;
+      transition: background-color 0.2s;
+      border-radius: 50%;
     }
 
-    .prev {
-      left: 0;
+    .nav-btn:hover { background-color: rgba(0,0,0,0.7); }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Equations styling */
+    .equations {
+      margin-top: 15px;
+      font-family: 'Times New Roman', serif;
+      font-size: 1.1em;
+      font-style: italic;
+      background-color: #f1f5f9;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #3b82f6;
     }
 
-    .next {
-      right: 0;
+    ul {
+      list-style-type: square;
+      margin-top: 15px;
+      padding-left: 25px;
     }
+
+    ul li { margin-bottom: 8px; }
+
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111827;
+      color: white;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      transition: background-color 0.3s;
+      font-size: 1em;
+    }
+
+    .back-btn:hover { background-color: #2563eb; }
+
   </style>
 </head>
+
 <body>
-  <header>Linear Momentum</header>
-  <p class = "description">The Linear Momentum unit explores how the motion of objects is affected by forces during interactions, particularly in collisions and explosions. Momentum is a vector quantity that depends on both mass and velocity, and its conservation in isolated systems is a powerful tool for analyzing dynamic events.
+  <header>Simply Physics — Linear Momentum</header>
 
-Key ideas in this unit include:
+  <main>
+    <a href="index.html" class="back-btn">← Back to Main Menu</a>
 
-<br><br>Linear Momentum: A measure of an object's motion, defined as the product of mass and velocity. Momentum is often known as the value of motion.
+    <h2>Introduction</h2>
+    <p class="description">
+      The Linear Momentum unit explores how motion is affected by forces during interactions, particularly collisions and explosions.
+      Momentum is a vector quantity dependent on mass and velocity. Conservation of momentum in isolated systems is a powerful
+      tool for analyzing dynamic events.
+    </p>
 
-<br><br>Impulse: The product of a force and the time over which it acts, equal to the change in momentum.
+    <p class="description">
+      <strong>Linear Momentum:</strong> Measure of motion, defined as <em>p = m·v</em>.<br><br>
+      <strong>Impulse:</strong> Product of force and the time it acts, equal to the change in momentum: <em>J = F·Δt</em>.<br><br>
+      <strong>Impulse-Momentum Theorem:</strong> Impulse on an object equals its change in momentum: <em>J = Δp</em>.<br><br>
+      <strong>Conservation of Linear Momentum:</strong> In a closed, isolated system, total momentum is conserved: <em>Σp<sub>initial</sub> = Σp<sub>final</sub></em>.
+    </p>
 
-<br><br>Impulse-Momentum Theorem: States that the impulse on an object equals its change in momentum
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="image1.jpg" alt="Linear Momentum Illustration">
+      </div>
+      <div class="slide">
+        <img src="image2.jpg" alt="Impulse Diagram Example">
+      </div>
+      <div class="slide">
+        <img src="image3.jpg" alt="Collision Example">
+      </div>
 
-<br><br>Conservation of Linear Momentum: In a closed, isolated system (no net external force), total momentum is conserved during interactions like collisions.</p>
-  <div class="slideshow-container">
-    <div class="slide">
-      <img src="image1.jpg" alt="Slide 1">
+      <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
     </div>
-    <div class="slide">
-      <img src="image2.jpg" alt="Slide 2">
+
+    <h2>Summary of Key Equations</h2>
+    <div class="equations">
+      1. p = m·v &nbsp;&nbsp;(Linear Momentum)<br>
+      2. J = F·Δt &nbsp;&nbsp;(Impulse)<br>
+      3. J = Δp &nbsp;&nbsp;(Impulse-Momentum Theorem)<br>
+      4. Σp<sub>initial</sub> = Σp<sub>final</sub> &nbsp;&nbsp;(Conservation of Momentum)
     </div>
-    <div class="slide">
-      <img src="image3.jpg" alt="Slide 3">
-    </div>
-    <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
-  </div>
+
+    <h2>Other Resources</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=NIVNfI0RN2k" target="_blank">Organic Chemistry Tutor — Linear Momentum & Conservation</a></li>
+      <li><a href="https://www.youtube.com/watch?v=yQ9Uwbo4Vao" target="_blank">6-Minute Unit Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ufXw3CgzJCk" target="_blank">Flipping Physics Exam Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=PCvgWrgVJx0" target="_blank">Physics By Brown — Momentum Review</a></li>
+      <li><a href="https://www.youtube.com/watch?v=FfaEbqmvKQA" target="_blank">Organic Chem Tutor 1-Hour Video — Collisions & Momentum</a></li>
+      <li><a href="https://www.varsitytutors.com/ap_physics_1-help/newtonian-mechanics/linear-motion-and-momentum?page=27" target="_blank">Linear Momentum Practice Problems (Varsity Tutors)</a></li>
+      <li><a href="https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:linear-momentum/xf557a762645cccc5:linear-momentum-and-impulse/e/momentum-and-impulse" target="_blank">Khan Academy Practice</a></li>
+      <li><a href="https://www.crackap.com/ap/physics-1/test23.html" target="_blank">Practice Problems (Simple)</a></li>
+      <li><a href="https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-5-momentum.pdf" target="_blank">Practice Test 1 (Impulse & Momentum)</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    © 2025 Simply Physics | AP Physics 1 — Linear Momentum
+  </footer>
 
   <script>
     let slideIndex = 0;
@@ -109,23 +227,7 @@ Key ideas in this unit include:
       showSlide(slideIndex);
     }
 
-    // Initialize first slide
     showSlide(slideIndex);
   </script>
-  <p>Summary: Primary equations include the velocity-time equation, displacement-time equation, time-independent equation, and displacement-velocity equation: <br>
-  hello</p>
-  <p class = "description">Other Resources:</p>
-  <ul>
-    <li><a href = "https://www.youtube.com/watch?v=NIVNfI0RN2k">Organic Chemistry Tutor Linear Momentum and Conservation</li>
-    <li><a href = "https://www.youtube.com/watch?v=yQ9Uwbo4Vao">Quick 6 Minute Review Over Entire Unit</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=ufXw3CgzJCk">Flipping Physics Exam Review</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=PCvgWrgVJx0">Physics By Brown Momentum Review</a></li>
-    <li><a href = "https://www.youtube.com/watch?v=FfaEbqmvKQA">Organic Chem Tutor 1 Hour Video(Collisions and Momentum)</a></li>
-    <li><a href = "https://www.varsitytutors.com/ap_physics_1-help/newtonian-mechanics/linear-motion-and-momentum?page=27">Linear Momentum Practice Problems(Varsitytutors)</a></li>
-    <li><a href = "https://www.khanacademy.org/science/ap-college-physics-1/xf557a762645cccc5:linear-momentum/xf557a762645cccc5:linear-momentum-and-impulse/e/momentum-and-impulse">Khan Academy Practice(Good for Introduction)</a></li>
-    <li><a href = "https://www.crackap.com/ap/physics-1/test23.html">Practice Problems(Possibly Too Simple)</a></li>
-    <li><a href = "https://www.crashwhite.com/apphysics/materials/practicetests/practice_test-5-momentum.pdf">Practice Test 1(Impulse, Momentum)</a></li>
-    
-  </ul>
 </body>
 </html>
